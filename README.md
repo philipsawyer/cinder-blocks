@@ -4,13 +4,13 @@
 ##### [by Andrew Sawyer](http://andrewjsawyer.com)
 ---
 ### Add source files
-> Add `layout.css` and `layout.js` to project folder
+> Add `cinder.css` and `cinder.js` to project folder
 
-### Import - add to HTML head
+### Import Resources - add to HTML head
 ```
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cinder.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</script>
-<script src="layout.js"></script>
+<script src="cinder.js"></script>
 ```
 
 ### How to use
