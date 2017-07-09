@@ -1,4 +1,4 @@
-# simple-layout
+# cinder-blocks
 ##### "super simple HTML grid"
 
 ##### [by Andrew Sawyer](http://andrewjsawyer.com)
