@@ -36,4 +36,4 @@
  > At the top of `layout.js` there are variables that can be changed if needed
 
 ### To-do
--[ ] Support for nesting
+- [ ] Support for nesting
