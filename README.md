@@ -14,10 +14,10 @@
 ```
 
 ### How to use
-* make a div with the name “l, m, or s” for different screen sizes. (large, medium, small)
-* follow “l, m, and s” with a number “1-24”
-* all divs in a “row” must add up to 24
-* center a div by adding “c” to the end of class name - ex:```class="m8c"```
+1. Make a div with the name “l, m, or s” for different screen sizes. (large, medium, small)
+2. Follow “l, m, and s” with a number “1-24”
+3. All divs in a “row” must add up to 24
+4. Center a div by adding “c” to the end of class name - ex:```class="m8c"```
 
 ### Example
 ```
