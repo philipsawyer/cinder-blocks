@@ -1,12 +1,12 @@
 # simple-layout
-##### "super simple html grid"
+##### "super simple HTML grid"
 
 ##### [by Andrew Sawyer](http://andrewjsawyer.com)
 ---
 ### Add source files
 > Add `layout.css` and `layout.js` to project folder
 
-### Import - add to html head
+### Import - add to HTML head
 ```
 <link rel="stylesheet" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</script>
