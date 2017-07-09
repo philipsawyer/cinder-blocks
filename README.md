@@ -3,7 +3,7 @@
 
 ##### [by Andrew Sawyer](http://andrewjsawyer.com)
 ---
-### Add source files
+### Add Source Files
 > Add `cinder.css` and `cinder.js` to project folder
 
 ### Import Resources - add to HTML head
@@ -33,7 +33,7 @@
  ```
 
 ### Change Breakpoints
- > At the top of `layout.js` there are variables that can be changed if needed
+ > At the top of `cinder.js` there are variables that can be changed if needed
 
 ### To-do
 - [ ] Support for nesting
