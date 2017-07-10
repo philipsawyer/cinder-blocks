@@ -6,13 +6,22 @@ var mediumthreshhold = 640;
 
 $(window).resize(function() {
   resizeview();
+  // removecfromname();
 });
 
 $(window).ready(function() {
   resizeview();
+  // removecfromname();
 });
 
+// function removecfromname() {
+//
+// }
+
 function resizeview() {
+
+  $( ".l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12, .l13, .l14, .l15, .l16, .l17, .l18, .l19, .l20, .l21, .l22, .l23, .l24, .m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8, .m9, .m10, .m11, .m12, .m13, .m14, .m15, .m16, .m17, .m18, .m19, .m20, .m21, .m22, .m23, .m24, .s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12, .s13, .s14, .s15, .s16, .s17, .s18, .s19, .s20, .s21, .s22, .s23, .s24" ).css({ "margin-left": "0em", "margin-right": "0em" });
+
   var viewportwidth = $(window).width();
 
   var dividedviewportwidth = viewportwidth / 24;
@@ -72,6 +81,8 @@ function resizeview() {
     $(".l23").css("width", percent23);
     $(".l24").css("width", percent24);
 
+
+
     var l1cmargin = (viewportwidth - percent1) / 2;
     var l2cmargin = (viewportwidth - percent2) / 2;
     var l3cmargin = (viewportwidth - percent3) / 2;
@@ -98,7 +109,9 @@ function resizeview() {
     var l24cmargin = (viewportwidth - percent24) / 2;
 
     $(".l0c").css({
-      "width": 0
+      "width": 0,
+      "opacity": 0,
+      "visibility": "none"
     });
     $(".l1c").css({
       "width": percent1,

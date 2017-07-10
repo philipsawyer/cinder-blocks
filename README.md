@@ -39,4 +39,3 @@
 ### To-do
 - [ ] Support for nesting
 - [ ] Fix l0,m0,s0
-- [ ] Fix element reflow when centered (for now you have to reload the page)
