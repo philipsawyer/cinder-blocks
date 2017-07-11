@@ -2,6 +2,8 @@
 ##### "super simple HTML grid"
 
 ##### [by Andrew Sawyer](http://andrewjsawyer.com)
+
+##### See a test here : [Cinder Example](http://andrewjsawyer.com/cinder/template.html)
 ---
 ### Add Source Files
 > Add `cinder.css` and `cinder.js` to project folder
