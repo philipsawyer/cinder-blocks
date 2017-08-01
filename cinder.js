@@ -17,11 +17,6 @@ $(window).ready(function() {
 // main function (does everything-ish)
 function resizeview() {
 
-  // for template - colors (delete this)
-  $( ".redextest" ).css({ "background-color": "red"});
-  $( ".greenextest" ).css({ "background-color": "green"});
-  $( ".blueextest" ).css({ "background-color": "blue"});
-
   // resizes elements to fit in columns
   $( "p, h1, h2, h3, h4, h5, h6, ul, li, ol, table, input, a, form" ).css({ "word-wrap": "break-word"});
   $( "img" ).css({ "width": "100%"});
@@ -67,7 +62,6 @@ function resizeview() {
 
   // large - everything is described in here with comments
   if (viewportwidth >= largethreshhold) {
-    console.log("large");
 
     // sets the class to the width of the variable above
     $(".l0").css("width", 0);
@@ -253,7 +247,6 @@ function resizeview() {
 
   // medium
   if (largethreshhold > viewportwidth && viewportwidth >= mediumthreshhold) {
-    console.log("medium");
 
     $(".m0").css("width", 0);
     $(".m1").css("width", percent1);
@@ -433,7 +426,6 @@ function resizeview() {
 
   //small
   if (mediumthreshhold > viewportwidth) {
-    console.log("small");
 
     $(".s0").css("width", 0);
     $(".s1").css("width", percent1);
