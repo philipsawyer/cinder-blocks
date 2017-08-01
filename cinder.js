@@ -1,7 +1,9 @@
 // used to set maximum for medium and minimum for large
+// defualt is 1024
 var largethreshhold = 1024;
 
 // used to set maximum for small and minimum for medium
+// defualt is 640
 var mediumthreshhold = 640;
 
 // runs everything ("resizeview") when the window size changes
