@@ -80,30 +80,13 @@ function resizeview() {
 
 
     // for centered elements - takes viewportwidth and subtracts however much the element is, then divides by 2 to get right and left margins
-    var l1cmargin = (viewportwidth - percent1) / 2;
-    var l2cmargin = (viewportwidth - percent2) / 2;
-    var l3cmargin = (viewportwidth - percent3) / 2;
-    var l4cmargin = (viewportwidth - percent4) / 2;
-    var l5cmargin = (viewportwidth - percent5) / 2;
-    var l6cmargin = (viewportwidth - percent6) / 2;
-    var l7cmargin = (viewportwidth - percent7) / 2;
-    var l8cmargin = (viewportwidth - percent8) / 2;
-    var l9cmargin = (viewportwidth - percent9) / 2;
-    var l10cmargin = (viewportwidth - percent10) / 2;
-    var l11cmargin = (viewportwidth - percent11) / 2;
-    var l12cmargin = (viewportwidth - percent12) / 2;
-    var l13cmargin = (viewportwidth - percent13) / 2;
-    var l14cmargin = (viewportwidth - percent14) / 2;
-    var l15cmargin = (viewportwidth - percent15) / 2;
-    var l16cmargin = (viewportwidth - percent16) / 2;
-    var l17cmargin = (viewportwidth - percent17) / 2;
-    var l18cmargin = (viewportwidth - percent18) / 2;
-    var l19cmargin = (viewportwidth - percent19) / 2;
-    var l20cmargin = (viewportwidth - percent20) / 2;
-    var l21cmargin = (viewportwidth - percent21) / 2;
-    var l22cmargin = (viewportwidth - percent22) / 2;
-    var l23cmargin = (viewportwidth - percent23) / 2;
-    var l24cmargin = (viewportwidth - percent24) / 2;
+
+    var margins = [];
+
+    for (i = 0; i < 25; i++) {
+      var value = viewportwidth - percents[i] / 2;
+      margins.push(value);
+    }
 
     // sets margins according to variable above
     $(".l0c").css({
@@ -111,126 +94,15 @@ function resizeview() {
       "opacity": 0,
       "visibility": "none"
     });
-    $(".l1c").css({
-      "width": percent1,
-      "margin-right": l1cmargin,
-      "margin-left": l1cmargin
-    });
-    $(".l2c").css({
-      "width": percent2,
-      "margin-right": l2cmargin,
-      "margin-left": l2cmargin
-    });
-    $(".l3c").css({
-      "width": percent3,
-      "margin-right": l3cmargin,
-      "margin-left": l3cmargin
-    });
-    $(".l4c").css({
-      "width": percent4,
-      "margin-right": l4cmargin,
-      "margin-left": l4cmargin
-    });
-    $(".l5c").css({
-      "width": percent5,
-      "margin-right": l5cmargin,
-      "margin-left": l5cmargin
-    });
-    $(".l6c").css({
-      "width": percent6,
-      "margin-right": l6cmargin,
-      "margin-left": l6cmargin
-    });
-    $(".l7c").css({
-      "width": percent7,
-      "margin-right": l7cmargin,
-      "margin-left": l7cmargin
-    });
-    $(".l8c").css({
-      "width": percent8,
-      "margin-right": l8cmargin,
-      "margin-left": l8cmargin
-    });
-    $(".l9c").css({
-      "width": percent9,
-      "margin-right": l9cmargin,
-      "margin-left": l9cmargin
-    });
-    $(".l10c").css({
-      "width": percent10,
-      "margin-right": l10cmargin,
-      "margin-left": l10cmargin
-    });
-    $(".l11c").css({
-      "width": percent11,
-      "margin-right": l11cmargin,
-      "margin-left": l11cmargin
-    });
-    $(".l12c").css({
-      "width": percent12,
-      "margin-right": l12cmargin,
-      "margin-left": l12cmargin
-    });
-    $(".l13c").css({
-      "width": percent13,
-      "margin-right": l13cmargin,
-      "margin-left": l13cmargin
-    });
-    $(".l14c").css({
-      "width": percent14,
-      "margin-right": l14cmargin,
-      "margin-left": l14cmargin
-    });
-    $(".l15c").css({
-      "width": percent15,
-      "margin-right": l15cmargin,
-      "margin-left": l15cmargin
-    });
-    $(".l16c").css({
-      "width": percent16,
-      "margin-right": l16cmargin,
-      "margin-left": l16cmargin
-    });
-    $(".l17c").css({
-      "width": percent17,
-      "margin-right": l17cmargin,
-      "margin-left": l17cmargin
-    });
-    $(".l18c").css({
-      "width": percent18,
-      "margin-right": l18cmargin,
-      "margin-left": l18cmargin
-    });
-    $(".l19c").css({
-      "width": percent19,
-      "margin-right": l19cmargin,
-      "margin-left": l19cmargin
-    });
-    $(".l20c").css({
-      "width": percent20,
-      "margin-right": l20cmargin,
-      "margin-left": l20cmargin
-    });
-    $(".l21c").css({
-      "width": percent21,
-      "margin-right": l21cmargin,
-      "margin-left": l21cmargin
-    });
-    $(".l22c").css({
-      "width": percent22,
-      "margin-right": l22cmargin,
-      "margin-left": l22cmargin
-    });
-    $(".l23c").css({
-      "width": percent23,
-      "margin-right": l23cmargin,
-      "margin-left": l23cmargin
-    });
-    $(".l24c").css({
-      "width": percent24,
-      "margin-right": l24cmargin,
-      "margin-left": l24cmargin
-    });
+
+    for (i = 0; i < 25; i++) {
+      var element = ".l" + (i + 1) + "c";
+      $(element).css({
+        "width": percents[i],
+        "margin-right": margins[i],
+        "margin-left": margins[i]
+      });
+    }
   }
 
   // medium
