@@ -36,6 +36,12 @@ function resizeview() {
   // divides viewportwidth into a 24 collumn grid
   var dividedviewportwidth = viewportwidth / 24;
 
+  var percents = [];
+
+  for(i = 0; i < 25; i++) {
+    percents.push(dividedviewportwidth * (i + 1));
+  }
+
   // multiplies 1 column * the number to the right
   var percent1 = dividedviewportwidth * 1
   var percent2 = dividedviewportwidth * 2
@@ -65,32 +71,12 @@ function resizeview() {
   // large - everything is described in here with comments
   if (viewportwidth >= largethreshhold) {
 
-    // sets the class to the width of the variable above
     $(".l0").css("width", 0);
-    $(".l1").css("width", percent1);
-    $(".l2").css("width", percent2);
-    $(".l3").css("width", percent3);
-    $(".l4").css("width", percent4);
-    $(".l5").css("width", percent5);
-    $(".l6").css("width", percent6);
-    $(".l7").css("width", percent7);
-    $(".l8").css("width", percent8);
-    $(".l9").css("width", percent9);
-    $(".l10").css("width", percent10);
-    $(".l11").css("width", percent11);
-    $(".l12").css("width", percent12);
-    $(".l13").css("width", percent13);
-    $(".l14").css("width", percent14);
-    $(".l15").css("width", percent15);
-    $(".l16").css("width", percent16);
-    $(".l17").css("width", percent17);
-    $(".l18").css("width", percent18);
-    $(".l19").css("width", percent19);
-    $(".l20").css("width", percent20);
-    $(".l21").css("width", percent21);
-    $(".l22").css("width", percent22);
-    $(".l23").css("width", percent23);
-    $(".l24").css("width", percent24);
+
+    for (i = 0; i < 24; i++) {
+      var element = ".l" + (i + 1);
+      $(element).css("width", percents[i]);
+    }
 
 
     // for centered elements - takes viewportwidth and subtracts however much the element is, then divides by 2 to get right and left margins
