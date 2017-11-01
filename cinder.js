@@ -38,7 +38,7 @@ function resizeview() {
 
   var percents = [];
 
-  for(i = 0; i < 25; i++) {
+  for(i = 0; i < 24; i++) {
     percents.push(dividedviewportwidth * (i + 1));
   }
 
@@ -95,7 +95,7 @@ function resizeview() {
       "visibility": "none"
     });
 
-    for (i = 0; i < 25; i++) {
+    for (i = 0; i < 24; i++) {
       var element = ".l" + (i + 1) + "c";
       $(element).css({
         "width": percents[i],
@@ -107,181 +107,30 @@ function resizeview() {
 
   // medium
   if (largethreshhold > viewportwidth && viewportwidth >= mediumthreshhold) {
-
+    
     $(".m0").css("width", 0);
-    $(".m1").css("width", percent1);
-    $(".m2").css("width", percent2);
-    $(".m3").css("width", percent3);
-    $(".m4").css("width", percent4);
-    $(".m5").css("width", percent5);
-    $(".m6").css("width", percent6);
-    $(".m7").css("width", percent7);
-    $(".m8").css("width", percent8);
-    $(".m9").css("width", percent9);
-    $(".m10").css("width", percent10);
-    $(".m11").css("width", percent11);
-    $(".m12").css("width", percent12);
-    $(".m13").css("width", percent13);
-    $(".m14").css("width", percent14);
-    $(".m15").css("width", percent15);
-    $(".m16").css("width", percent16);
-    $(".m17").css("width", percent17);
-    $(".m18").css("width", percent18);
-    $(".m19").css("width", percent19);
-    $(".m20").css("width", percent20);
-    $(".m21").css("width", percent21);
-    $(".m22").css("width", percent22);
-    $(".m23").css("width", percent23);
-    $(".m24").css("width", percent24);
+    for (i = 0; i < 24; i++) {
+      var element = ".m" + (i + 1);
+      $(element).css("width", percents[i]);
+    }
 
-    var m1cmargin = (viewportwidth - percent1) / 2;
-    var m2cmargin = (viewportwidth - percent2) / 2;
-    var m3cmargin = (viewportwidth - percent3) / 2;
-    var m4cmargin = (viewportwidth - percent4) / 2;
-    var m5cmargin = (viewportwidth - percent5) / 2;
-    var m6cmargin = (viewportwidth - percent6) / 2;
-    var m7cmargin = (viewportwidth - percent7) / 2;
-    var m8cmargin = (viewportwidth - percent8) / 2;
-    var m9cmargin = (viewportwidth - percent9) / 2;
-    var m10cmargin = (viewportwidth - percent10) / 2;
-    var m11cmargin = (viewportwidth - percent11) / 2;
-    var m12cmargin = (viewportwidth - percent12) / 2;
-    var m13cmargin = (viewportwidth - percent13) / 2;
-    var m14cmargin = (viewportwidth - percent14) / 2;
-    var m15cmargin = (viewportwidth - percent15) / 2;
-    var m16cmargin = (viewportwidth - percent16) / 2;
-    var m17cmargin = (viewportwidth - percent17) / 2;
-    var m18cmargin = (viewportwidth - percent18) / 2;
-    var m19cmargin = (viewportwidth - percent19) / 2;
-    var m20cmargin = (viewportwidth - percent20) / 2;
-    var m21cmargin = (viewportwidth - percent21) / 2;
-    var m22cmargin = (viewportwidth - percent22) / 2;
-    var m23cmargin = (viewportwidth - percent23) / 2;
-    var m24cmargin = (viewportwidth - percent24) / 2;
+    var margins = [];
+    for (i = 0; i < 25; i++) {
+      var value = (viewportwidth - percents[i]) / 2;
+      margins.push(value);
+    }
 
     $(".m0c").css({
       "width": 0
     });
-    $(".m1c").css({
-      "width": percent1,
-      "margin-right": m1cmargin,
-      "margin-left": m1cmargin
-    });
-    $(".m2c").css({
-      "width": percent2,
-      "margin-right": m2cmargin,
-      "margin-left": m2cmargin
-    });
-    $(".m3c").css({
-      "width": percent3,
-      "margin-right": m3cmargin,
-      "margin-left": m3cmargin
-    });
-    $(".m4c").css({
-      "width": percent4,
-      "margin-right": m4cmargin,
-      "margin-left": m4cmargin
-    });
-    $(".m5c").css({
-      "width": percent5,
-      "margin-right": m5cmargin,
-      "margin-left": m5cmargin
-    });
-    $(".m6c").css({
-      "width": percent6,
-      "margin-right": m6cmargin,
-      "margin-left": m6cmargin
-    });
-    $(".m7c").css({
-      "width": percent7,
-      "margin-right": m7cmargin,
-      "margin-left": m7cmargin
-    });
-    $(".m8c").css({
-      "width": percent8,
-      "margin-right": m8cmargin,
-      "margin-left": m8cmargin
-    });
-    $(".m9c").css({
-      "width": percent9,
-      "margin-right": m9cmargin,
-      "margin-left": m9cmargin
-    });
-    $(".m10c").css({
-      "width": percent10,
-      "margin-right": m10cmargin,
-      "margin-left": m10cmargin
-    });
-    $(".m11c").css({
-      "width": percent11,
-      "margin-right": m11cmargin,
-      "margin-left": m11cmargin
-    });
-    $(".m12c").css({
-      "width": percent12,
-      "margin-right": m12cmargin,
-      "margin-left": m12cmargin
-    });
-    $(".m13c").css({
-      "width": percent13,
-      "margin-right": m13cmargin,
-      "margin-left": m13cmargin
-    });
-    $(".m14c").css({
-      "width": percent14,
-      "margin-right": m14cmargin,
-      "margin-left": m14cmargin
-    });
-    $(".m15c").css({
-      "width": percent15,
-      "margin-right": m15cmargin,
-      "margin-left": m15cmargin
-    });
-    $(".m16c").css({
-      "width": percent16,
-      "margin-right": m16cmargin,
-      "margin-left": m16cmargin
-    });
-    $(".m17c").css({
-      "width": percent17,
-      "margin-right": m17cmargin,
-      "margin-left": m17cmargin
-    });
-    $(".m18c").css({
-      "width": percent18,
-      "margin-right": m18cmargin,
-      "margin-left": m18cmargin
-    });
-    $(".m19c").css({
-      "width": percent19,
-      "margin-right": m19cmargin,
-      "margin-left": m19cmargin
-    });
-    $(".m20c").css({
-      "width": percent20,
-      "margin-right": m20cmargin,
-      "margin-left": m20cmargin
-    });
-    $(".m21c").css({
-      "width": percent21,
-      "margin-right": m21cmargin,
-      "margin-left": m21cmargin
-    });
-    $(".m22c").css({
-      "width": percent22,
-      "margin-right": m22cmargin,
-      "margin-left": m22cmargin
-    });
-    $(".m23c").css({
-      "width": percent23,
-      "margin-right": m23cmargin,
-      "margin-left": m23cmargin
-    });
-    $(".m24c").css({
-      "width": percent24,
-      "margin-right": m24cmargin,
-      "margin-left": m24cmargin
-    });
+    for (i = 0; i < 24; i++) {
+      var element = ".m" + (i + 1) + "c";
+      $(element).css({
+        "width": percents[i],
+        "margin-right": margins[i],
+        "margin-left": margins[i]
+      });
+    }
   }
 
   //small
