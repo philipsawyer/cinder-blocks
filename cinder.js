@@ -42,50 +42,13 @@ function resizeview() {
     percents.push(dividedviewportwidth * (i + 1));
   }
 
-  // multiplies 1 column * the number to the right
-  var percent1 = dividedviewportwidth * 1
-  var percent2 = dividedviewportwidth * 2
-  var percent3 = dividedviewportwidth * 3
-  var percent4 = dividedviewportwidth * 4
-  var percent5 = dividedviewportwidth * 5
-  var percent6 = dividedviewportwidth * 6
-  var percent7 = dividedviewportwidth * 7
-  var percent8 = dividedviewportwidth * 8
-  var percent9 = dividedviewportwidth * 9
-  var percent10 = dividedviewportwidth * 10
-  var percent11 = dividedviewportwidth * 11
-  var percent12 = dividedviewportwidth * 12
-  var percent13 = dividedviewportwidth * 13
-  var percent14 = dividedviewportwidth * 14
-  var percent15 = dividedviewportwidth * 15
-  var percent16 = dividedviewportwidth * 16
-  var percent17 = dividedviewportwidth * 17
-  var percent18 = dividedviewportwidth * 18
-  var percent19 = dividedviewportwidth * 19
-  var percent20 = dividedviewportwidth * 20
-  var percent21 = dividedviewportwidth * 21
-  var percent22 = dividedviewportwidth * 22
-  var percent23 = dividedviewportwidth * 23
-  var percent24 = dividedviewportwidth * 24
-
   // large - everything is described in here with comments
   if (viewportwidth >= largethreshhold) {
 
     $(".l0").css("width", 0);
-
     for (i = 0; i < 24; i++) {
       var element = ".l" + (i + 1);
       $(element).css("width", percents[i]);
-    }
-
-
-    // for centered elements - takes viewportwidth and subtracts however much the element is, then divides by 2 to get right and left margins
-
-    var margins = [];
-
-    for (i = 0; i < 25; i++) {
-      var value = viewportwidth - percents[i] / 2;
-      margins.push(value);
     }
 
     // sets margins according to variable above
@@ -94,13 +57,13 @@ function resizeview() {
       "opacity": 0,
       "visibility": "none"
     });
-
     for (i = 0; i < 24; i++) {
       var element = ".l" + (i + 1) + "c";
+      var margin = (viewportwidth - percents[i]) / 2;
       $(element).css({
         "width": percents[i],
-        "margin-right": margins[i],
-        "margin-left": margins[i]
+        "margin-right": margin,
+        "margin-left": margin
       });
     }
   }
@@ -114,21 +77,16 @@ function resizeview() {
       $(element).css("width", percents[i]);
     }
 
-    var margins = [];
-    for (i = 0; i < 25; i++) {
-      var value = (viewportwidth - percents[i]) / 2;
-      margins.push(value);
-    }
-
     $(".m0c").css({
       "width": 0
     });
     for (i = 0; i < 24; i++) {
       var element = ".m" + (i + 1) + "c";
+      var margin = (viewportwidth - percents[i]) / 2;
       $(element).css({
         "width": percents[i],
-        "margin-right": margins[i],
-        "margin-left": margins[i]
+        "margin-right": margin,
+        "margin-left": margin
       });
     }
   }
@@ -141,22 +99,17 @@ function resizeview() {
       var element = ".s" + (i + 1);
       $(element).css("width", percents[i]);
     }
-
-    var margins = [];
-    for (i = 0; i < 25; i++) {
-      var value = (viewportwidth - percents[i]) / 2;
-      margins.push(value);
-    }
     
     $(".s0c").css({
       "width": 0
     });
     for (i = 0; i < 24; i++) {
       var element = ".s" + (i + 1) + "c";
+      var margin = (viewportwidth - percents[i]) / 2;
       $(element).css({
         "width": percents[i],
-        "margin-right": margins[i],
-        "margin-left": margins[i]
+        "margin-right": margin,
+        "margin-left": margin
       });
     }
   }
